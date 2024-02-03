@@ -1,4 +1,6 @@
 ### Hi there 👋
+## About me
+I'm DevOps engineer with 6th years commercial expirience
 
 <!--
 **akondratov/akondratov** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
