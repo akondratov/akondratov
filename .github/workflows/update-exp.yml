@@ -1,0 +1,23 @@
+name: Update Experience
+
+on:
+  schedule:
+    - cron: '0 0 1 1 *'
+  workflow_dispatch:
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Update readme
+        run: |
+          YEARS=$(($(date +'%Y') - 2018))
+          sed -i "s/\([0-9]\+\)+ years/${YEARS}+ years/" README.md
+
+      - uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: auto update years
+          branch: main
+          file_pattern: README.md
